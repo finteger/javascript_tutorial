@@ -9,12 +9,20 @@
 
 */
 
-//Displays current date & time
-document.getElementById("dateNow").innerHTML = 'm/d/y<br />h:m:s';
+
 
 //Display the time left until New Years Eve Bash
 document.getElementById("days").textContent = `dd`;
 document.getElementById("hrs").textContent = `hh`;
 document.getElementById("mins").textContent = `mm`;
 document.getElementById("secs").textContent = `ss`;
+
+//Store current date & time
+var currentDay = new Date();
+var dateStr = currentDay.toLocaleDateString();
+var timeStr = currentDay.toLocaleTimeString();
+
+//Displays current date & time
+document.getElementById("dateNow").innerHTML = 
+dateStr + "<br />" + timeStr;
 
