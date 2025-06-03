@@ -42,13 +42,17 @@ const fruits = ["Banana", "Orange", "Apple", "Mango"];
 fruits.splice(2, 0, "Lemon", "Kiwi");
 
 //to uppercase or lowercase
-console.log(watzthisString.toUpperCase(), watzthisString.toLocaleLowerCase());
+console.log(watzthisString.toUpperCase(), watzthisString.toLowerCase());
 
 //trim removes leading and trailing white spaces
 var string = "  This is a   string  ";
 console.log(string.trim());
 
-//the replace method uses regex (regular expressions)
+//the replace method uses regex (regular expressions) and replace() or replaceAll() method
+let text = "Th0is i6s a 7par4ag5raph.";
+let result = text.replace( /[0-9]/g, "");
+console.log(result);
+
 
 
 
