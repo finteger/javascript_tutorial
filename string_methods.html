@@ -19,18 +19,36 @@ console.log(add(num1, num2));
 */
 
 //actual string methods (built-in)
- 
 let watzthisString = "JavaScript is the best!";
 
 //Character at index position
 console.log(watzthisString.charAt(3));
 
 //Concatenation.  Adding to the end.
-console.log(watzthisString.concat('  Java is great, too!'));
+console.log(watzthisString.concat(' Java is great, too!'));
 
 
 //Substring is a piece of original string.
 console.log(watzthisString.substring(2, 5));
+
+//Slice the string
+console.log(watzthisString.slice(3, 6));
+
+//splice method
+//Create an Array
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+// At position 2, add "Lemon" and "Kiwi"
+fruits.splice(2, 0, "Lemon", "Kiwi");
+
+//to uppercase or lowercase
+console.log(watzthisString.toUpperCase(), watzthisString.toLocaleLowerCase());
+
+//trim removes leading and trailing white spaces
+var string = "  This is a   string  ";
+console.log(string.trim());
+
+//the replace method uses regex (regular expressions)
 
 
 
