@@ -21,10 +21,26 @@
         console.log('Both conditions are true');
     }
 
-    
+    //OR operator.  this needs only one condition to evaluate to true
+    if(a === 1 || b === 3){
+        console.log('Only one condition evaluates to true');
+    }
 
-    
+    //Negation/NOT operator.  condition that variable is not something.
+    if(a !== 6){
+        console.log('a is NOT six');
+    }
 
 
+    //nullish coalescing or null-aware operator.
+    const myText = "";
+
+    const notFalsyText = myText || 'Hello, World!';
+
+    console.log(notFalsyText); //Hello World
+
+    const preservingFalsy = myText ?? 'Hello, Universe';
+
+    console.log(preservingFalsy); //Hello World
 
 </script>
