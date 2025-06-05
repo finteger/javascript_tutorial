@@ -29,7 +29,7 @@ console.log(array.reduce((a, b) => a + b)); //output: 55
 //what if I want to join an array to an array
 console.log(array.concat(array2)); //output: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 
 
-//if we want to joint individual strings together into a single string
+//if we want to joint individual strings together into a single string, using a specific delimiter
 let words = ["hello", "world", "!"]
 let sentence = words.join(' ');
 console.log(sentence); //output:  hello world !
