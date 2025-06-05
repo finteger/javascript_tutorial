@@ -7,7 +7,6 @@ var new_array_sorted = array.sort((a,b) => a - b);
 console.log(new_array_sorted);
 //console.log(array.reverse());
 
-
 //to add items to the end of an array 
 array.push(11);
 console.log(array); //output: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11
@@ -15,7 +14,6 @@ console.log(array); //output: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11
 //remove the last element of an array
 array.pop();
 console.log(array); //output: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 
-
 
 //check if there is at least item in an array that matches our criteria
 console.log(array.some(num => num == 1)); //output: true
