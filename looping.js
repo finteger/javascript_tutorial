@@ -32,9 +32,6 @@ async function fetchAndDisplayUsers(){
         const response = await fetch('https://jsonplaceholder.typicode.com/users');
         const users = await response.json();
 
-       console.log(response);
-       console.log(users);
-
         //loop through the users object collection array
         users.forEach(user => {
             console.log(`Name: ${user.name}`);
@@ -48,4 +45,5 @@ async function fetchAndDisplayUsers(){
     }
 }
 
+//invoke the function
 fetchAndDisplayUsers();
