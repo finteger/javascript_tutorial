@@ -13,8 +13,8 @@
             <!-- Loading placeholder when waiting on response from network-->
              <div id="loading" class="text-center">
                  <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500">
-                   <p class="mt-2 text-gray-600">Loading...</p>
                  </div>
+                <p class="mt-2 text-gray-600">Loading...</p>
              </div>
 
              <div id="weather" >
@@ -55,6 +55,13 @@
                 </div>
              </div>
             </div>
+            <div id="error" class="hidden text-center text-red-600">
+                <p>Unable to load data.</p>
+                <p class="text-sm mt-2">Please check your internet connection or try again later.</p>
+            </div>
+
+            <button onclick="loadWeather()" class="w-full mt-6 bg-blue-500 hover:bg-blue-600
+            text-white font-semibold py-2 px-4 rounded transition duration-200 ">Refresh Weather</button>
         </div>
     </body>
 </html>
