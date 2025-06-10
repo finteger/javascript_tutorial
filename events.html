@@ -9,7 +9,7 @@
     }
 </style>
 
-<body onmousemove="tracker(e)">
+<body id="body">
     <div id="box">
     <button onclick="doSomething(event)">Click Me</button>
     </div>
@@ -22,10 +22,13 @@
         box.textContent = event;
     }
 
+    document.getElementById("body").onmousemove = tracker;
+
     function tracker(e){
+
         var hPos = e.clientX;
         var vPos = e.clientY;
 
-        alert(hPos + vPos);
+        alert("x:" + hPos + " , " + "y:" + vPos);
     }
 </script>
