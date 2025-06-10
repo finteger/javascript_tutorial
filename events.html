@@ -1,0 +1,22 @@
+<style>
+    #box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        width: 100px;
+        background: black;
+    }
+</style>
+
+<div id="box">
+  <button onclick="doSomething(event)">Click Me</button>
+</div>
+
+<script>
+    function doSomething(event){
+        var box = document.getElementById("box");
+        box.style.background = "blue";
+        box.textContent = event;
+    }
+</script>
