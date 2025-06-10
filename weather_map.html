@@ -5,13 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Red Deer Weather</title>
         <script src="https://cdn.tailwindcss.com/"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     <body class="bg-blue-500 min-h-screen flex item-center justify-content p-4">
         <div class="bg-white rounded-lg shadow-lg p-8 max-w-md w-full">
             <h1 class="text-2xl font-bold text-center mb-6 text-gray-600">Red Deer Weather</h1>
             
             <!-- Loading placeholder when waiting on response from network-->
-             <div id="loading" class="text-center">
+             <div id="loading" class="text-center hidden">
                  <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500">
                  </div>
                 <p class="mt-2 text-gray-600">Loading...</p>
@@ -19,7 +20,7 @@
 
              <div id="weather" >
                 <div class="text-center mb-4">
-                    <img id="weather-icon" class="w-16 h-16 mx-auto" alt="Weather Icon" />
+                    <i class="fa-solid fa-cloud"></i>
                     <h2 id="temperature" class="text-4xl font-bold text-gray-800"></h2>
                     <p id="description" class="text-lg text-gray-600 capitalize"></p>
                 </div>
