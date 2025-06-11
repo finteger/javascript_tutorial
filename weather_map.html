@@ -90,7 +90,12 @@
                     const data = await response.json();
 
                     //Update weather display
-                    
+                    document.getElementById("temperature").textContent = `${data.main.temp}`;
+                    document.getElementById("description").textContent =  `${data.weather[0].description}`;
+                    document.getElementById("feels-like").textContent = `${data.main.feels_like}`;
+                    document.getElementById("humidity").textContent = `${data.main.humidity}%`;
+                    document.getElementById("wind-speed").textContent = `${data.wind.speed}`;
+                    document.getElementById("pressure").textContent = `${data.main.pressure}`;
 
                 } catch (error) {
                     
