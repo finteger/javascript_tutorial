@@ -79,9 +79,19 @@
                 loading.classList.remove('hidden');
                 weather.classList.remove('hidden');
                 error.classList.remove('hidden');
-                
+
                 try {
+                    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${CITY}&appid=${API_KEY}&units=metric`);
+
+                    if(!response){
+                        throw new Error('Something went wrong with the request!');
+                    }
+
+                    const data = await response.json();
+
+                    //Update weather display
                     
+
                 } catch (error) {
                     
                 }
