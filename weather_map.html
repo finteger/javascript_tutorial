@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     <body class="bg-blue-500 min-h-screen flex item-center justify-content p-4">
-        <div class="bg-white rounded-lg shadow-lg p-8 max-w-md w-full">
+        <div class="bg-white rounded-lg shadow-lg p-8 max-w-md w-full ">
             <h1 class="text-2xl font-bold text-center mb-6 text-gray-600">Red Deer Weather</h1>
             
             <!-- Loading placeholder when waiting on response from network-->
@@ -56,7 +56,7 @@
                 </div>
              </div>
             </div>
-            <div id="error" class="hidden text-center text-red-600">
+            <div id="error" class="text-center text-red-600 hidden">
                 <p>Unable to load data.</p>
                 <p class="text-sm mt-2">Please check your internet connection or try again later.</p>
             </div>
@@ -97,11 +97,21 @@
                     document.getElementById("wind-speed").textContent = `${data.wind.speed}`;
                     document.getElementById("pressure").textContent = `${data.main.pressure}`;
 
+                    //Show weather, hide loading
+                    loading.classList.add('hidden');
+                    weather.classList.remove('hidden');
+                    error.classList.add('hidden');
+
                 } catch (error) {
-                    
+                    //show error
+                    loading.classList.add('hidden');
+                    error.classList.remove('hidden');
+                    console.error(`Error loading weather: ${error}`);
                 }
-             
             }
+
+            //load the weather
+            loadWeather();
 
         </script>
     </body>
