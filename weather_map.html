@@ -64,5 +64,30 @@
             <button onclick="loadWeather()" class="w-full mt-6 bg-blue-500 hover:bg-blue-600
             text-white font-semibold py-2 px-4 rounded transition duration-200 ">Refresh Weather</button>
         </div>
+        <script>
+            const API_KEY = 'ce8eb3004b0dcfd8664bd52d8f1eae78';
+            const CITY = 'Red Deer, CA';
+
+            //we use async-await micro-task queue and then sent to call stack
+            //this is network operation
+            async function loadWeather(){
+                const loading = document.getElementById("loading");
+                const weather = document.getElementById("weather");
+                const error = document.getElementById("error");
+
+                //show loading, hide others
+                loading.classList.remove('hidden');
+                weather.classList.remove('hidden');
+                error.classList.remove('hidden');
+                
+                try {
+                    
+                } catch (error) {
+                    
+                }
+             
+            }
+
+        </script>
     </body>
 </html>
